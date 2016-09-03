@@ -6,30 +6,30 @@ body.album {
      background-size: cover;
  }
  
- .album-cover-art {
+.album-cover-art {
      position: relative;
      left: 20%;
      margin-top: 1rem;
      width: 60%;
  }
  
- .album-view-details {
+.album-view-details {
      position: relative;
      top: 1.5rem;
      padding: 1rem;
  }
  
- .album-view-details .album-view-title {
+.album-view-details .album-view-title {
      font-weight: 300;
      font-size: 2rem;
  }
  
- .album-view-details .album-view-artist {
+.album-view-details .album-view-artist {
      font-weight: 300;
      font-size: 1.5rem;
  }
  
- .album-view-details .album-view-release-info {
+.album-view-details .album-view-release-info {
      font-weight: 300;
      font-size: 0.75rem;
  }
@@ -42,24 +42,24 @@ body.album {
      border-collapse: collapse;
  }
  
- .album-view-song-item {
+.album-view-song-item {
      height: 3rem;
      border-bottom: 1px solid rgba(255,255,255,0.5);
  }
  
- .song-item-number {
+.song-item-number {
      width: 5%;
  }
  
- .song-item-title {
+.song-item-title {
      width: 85%;
  }
  
- .song-item-duration {
+.song-item-duration {
      width: 5%;
  }
 
-@media (max-width: 640px) and (min-width: 320px) {
+ @media (max-width: 640px) and (min-width: 320px) {
      .album-view-details {
          text-align: center;
      }
@@ -68,7 +68,7 @@ body.album {
          margin-top: 0;   
      }
  }
-
+ 
  @media (max-width: 1024px) and (min-width: 320px) {
     .album-view-song-list {
          position: relative;
