@@ -63,14 +63,7 @@ var createSongRow = function(songNumber, songName, songLength) {
  var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
     var setCurrentAlbum = function(album) {
-  
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
  
-     // #2
      albumTitle.firstChild.nodeValue = album.title;
      albumArtist.firstChild.nodeValue = album.artist;
      albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
@@ -86,6 +79,8 @@ var createSongRow = function(songNumber, songName, songLength) {
  };
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+var songRows = document.getElementsByClassName('album-view-song-item');
+
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
 
  window.onload = function() {
@@ -96,6 +91,12 @@ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
          }
      });
+     
+       for (var i = 0; i < songRows.length; i++) {
+         songRows[i].addEventListener('mouseleave', function(event) {
+            this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+         });
+     }
      
       var albums = [albumPicasso, albumBeyonce, albumMarconi];
       var index = 1;
